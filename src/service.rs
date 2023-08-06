@@ -1,5 +1,5 @@
 use crate::common::{JsonRpcRequest, JsonRpcResponse};
 
-pub trait RpcHandler {
-    fn request(&self, req: JsonRpcRequest) -> JsonRpcResponse;
+pub trait RpcService {
+    fn request(&self, request: &JsonRpcRequest, response: &mut JsonRpcResponse);
 }

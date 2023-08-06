@@ -15,10 +15,13 @@ def main():
         },
         "id": 2
     }))
+
     response = conn.getresponse()
     data = response.read()
+
     js = json.loads(data)
     print(js)
+
     conn.close()
 
 
